@@ -1,0 +1,19 @@
+$soft-blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$main-bg: hsl(217, 54%, 11%);
+$card-bg: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+$font-size-base: 1rem;
+$font-weight-light: 300;
+$font-weight-medium: 400;
+$font-weight-bold: 600;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  font-family: 'Outfit', sans-serif;
+}
