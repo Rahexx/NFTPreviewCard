@@ -1,9 +1,13 @@
 $soft-blue: hsl(215, 51%, 70%);
 $cyan: hsl(178, 100%, 50%);
 $main-bg: hsl(217, 54%, 11%);
-$card-bg: hsl(215, 32%, 27%);
+$card-bg: hsl(216, 50%, 16%);
+$color-line: hsl(215, 32%, 27%);
 $white: hsl(0, 0%, 100%);
 $font-size-base: 1rem;
+$font-size-small: 0.875rem;
+$font-size-medium: 1.125rem;
+$font-size-large: 1.375rem;
 $font-weight-light: 300;
 $font-weight-medium: 400;
 $font-weight-bold: 600;
@@ -15,5 +19,84 @@ $font-weight-bold: 600;
 }
 
 .container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $main-bg;
   font-family: 'Outfit', sans-serif;
+  overflow: hidden;
+}
+
+.modal {
+  height: 576px;
+  width: 90%;
+  padding: 28px;
+  background: $card-bg;
+  border-radius: 12px;
+
+  &_img {
+    display: inline-block;
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  &_content {
+    margin-top: 20px;
+    color: $soft-blue;
+  }
+
+  &_title {
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    color: $white;
+  }
+
+  &_text {
+    margin: 16px 0;
+    font-weight: $font-weight-light;
+  }
+
+  &_info {
+    padding-bottom: 16px;
+    border-bottom: 1px solid $color-line;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_price {
+    color: $cyan;
+  }
+
+  &_price,
+  &_time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &_author {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    font-weight: $font-weight-light;
+
+    &_avatar {
+      height: 32px;
+      width: 32px;
+      margin-right: 16px;
+      object-fit: cover;
+      border: 1px solid $white;
+      border-radius: 50%;
+    }
+
+    &_name {
+      display: inline-block;
+      margin-left: 4px;
+      color: $white;
+    }
+  }
 }
