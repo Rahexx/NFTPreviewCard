@@ -159,3 +159,26 @@ $font-weight-bold: 600;
     }
   }
 }
+
+@media (min-width: 992px) {
+  .modal {
+    height: 564px;
+    padding: 24px;
+
+    &_text {
+      margin: 20px 0;
+    }
+
+    &_layer {
+      height: 55%;
+    }
+
+    &_info {
+      padding-bottom: 24px;
+    }
+
+    &_text {
+      font-size: $font-size-medium;
+    }
+  }
+}
