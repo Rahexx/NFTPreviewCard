@@ -32,16 +32,34 @@ $font-weight-bold: 600;
 .modal {
   height: 576px;
   width: 90%;
+  max-width: 350px;
   padding: 28px;
   background: $card-bg;
   border-radius: 12px;
 
-  &_img {
-    display: inline-block;
+  &_layer {
+    position: relative;
     height: 60%;
     width: 100%;
-    object-fit: cover;
     border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &_img {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &_eye_icon {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    transform: translate(-50%, -50%);
   }
 
   &_content {
@@ -53,6 +71,12 @@ $font-weight-bold: 600;
     font-size: $font-size-large;
     font-weight: $font-weight-bold;
     color: $white;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      color: $cyan;
+    }
   }
 
   &_text {
@@ -97,6 +121,41 @@ $font-weight-bold: 600;
       display: inline-block;
       margin-left: 4px;
       color: $white;
+      cursor: pointer;
+      transition: 0.5s ease-in-out;
+
+      &:hover {
+        color: $cyan;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .modal {
+    &_layer:hover &_eye_icon {
+      opacity: 1;
+    }
+
+    &_layer {
+      cursor: pointer;
+
+      &:hover::before {
+        opacity: 0.4;
+      }
+
+      &::before {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        background: $cyan;
+        transition: 0.5s ease-in-out;
+        content: '';
+      }
     }
   }
 }
