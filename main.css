@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0d192b;
+  font-family: 'Outfit', sans-serif;
+  overflow: hidden; }
+
+.modal {
+  height: 576px;
+  width: 90%;
+  max-width: 350px;
+  padding: 28px;
+  background: #14253d;
+  border-radius: 12px; }
+  .modal_layer {
+    position: relative;
+    height: 60%;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden; }
+  .modal_img {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+  .modal_eye_icon {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    transform: translate(-50%, -50%); }
+  .modal_content {
+    margin-top: 20px;
+    color: #8bacda; }
+  .modal_title {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s ease-in-out; }
+    .modal_title:hover {
+      color: #00fff7; }
+  .modal_text {
+    margin: 16px 0;
+    font-weight: 300; }
+  .modal_info {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #2f415b;
+    display: flex;
+    justify-content: space-between; }
+  .modal_price {
+    color: #00fff7; }
+  .modal_price, .modal_time {
+    display: flex;
+    align-items: center;
+    gap: 8px; }
+  .modal_author {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    font-weight: 300; }
+    .modal_author_avatar {
+      height: 32px;
+      width: 32px;
+      margin-right: 16px;
+      object-fit: cover;
+      border: 1px solid white;
+      border-radius: 50%; }
+    .modal_author_name {
+      display: inline-block;
+      margin-left: 4px;
+      color: white;
+      cursor: pointer;
+      transition: 0.5s ease-in-out; }
+      .modal_author_name:hover {
+        color: #00fff7; }
+
+@media (min-width: 768px) {
+  .modal_layer:hover .modal_eye_icon {
+    opacity: 1; }
+  .modal_layer {
+    cursor: pointer; }
+    .modal_layer:hover::before {
+      opacity: 0.4; }
+    .modal_layer::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      background: #00fff7;
+      transition: 0.5s ease-in-out;
+      content: ''; } }
+@media (min-width: 992px) {
+  .modal {
+    height: 564px;
+    padding: 24px; }
+    .modal_text {
+      margin: 20px 0; }
+    .modal_layer {
+      height: 55%; }
+    .modal_info {
+      padding-bottom: 24px; }
+    .modal_text {
+      font-size: 1.125rem; } }
+
+/*# sourceMappingURL=main.css.map */
