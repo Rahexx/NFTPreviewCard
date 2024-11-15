@@ -100,6 +100,7 @@ $space-xxl: 28px;
 
   &_price {
     color: $cyan;
+    font-weight: 400;
   }
 
   &_price,
@@ -177,7 +178,7 @@ $space-xxl: 28px;
     }
 
     &_text {
-      margin: $space-l 0 $space-xl;
+      margin: $space-l 0;
     }
 
     &_layer {

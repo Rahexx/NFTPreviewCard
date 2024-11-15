@@ -59,7 +59,8 @@
     display: flex;
     justify-content: space-between; }
   .modal_price {
-    color: #00fff7; }
+    color: #00fff7;
+    font-weight: 400; }
   .modal_price, .modal_time {
     display: flex;
     align-items: center;
@@ -110,7 +111,7 @@
     .modal_content {
       margin-top: 24px; }
     .modal_text {
-      margin: 20px 0 24px; }
+      margin: 20px 0; }
     .modal_layer {
       height: 56%; }
     .modal_info {
