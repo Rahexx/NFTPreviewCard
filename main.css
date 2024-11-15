@@ -63,7 +63,7 @@
   .modal_price, .modal_time {
     display: flex;
     align-items: center;
-    gap: 8px; }
+    gap: 4px; }
   .modal_author {
     margin-top: 16px;
     display: flex;
