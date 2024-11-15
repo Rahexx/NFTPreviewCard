@@ -11,6 +11,13 @@ $font-size-large: 1.375rem;
 $font-weight-light: 300;
 $font-weight-medium: 400;
 $font-weight-bold: 600;
+$w-full: 100%;
+$space-xs: 4px;
+$space-s: 8px;
+$space-base: 16px;
+$space-l: 20px;
+$space-xl: 24px;
+$space-xxl: 28px;
 
 * {
   margin: 0;
@@ -33,14 +40,14 @@ $font-weight-bold: 600;
   height: 576px;
   width: 90%;
   max-width: 350px;
-  padding: 28px;
+  padding: $space-xxl;
   background: $card-bg;
   border-radius: 12px;
 
   &_layer {
     position: relative;
     height: 60%;
-    width: 100%;
+    width: $w-full;
     border-radius: 8px;
     overflow: hidden;
   }
@@ -48,7 +55,7 @@ $font-weight-bold: 600;
   &_img {
     display: inline-block;
     height: 100%;
-    width: 100%;
+    width: $w-full;
     object-fit: cover;
   }
 
@@ -63,7 +70,7 @@ $font-weight-bold: 600;
   }
 
   &_content {
-    margin-top: 20px;
+    margin-top: $space-l;
     color: $soft-blue;
   }
 
@@ -80,12 +87,12 @@ $font-weight-bold: 600;
   }
 
   &_text {
-    margin: 16px 0;
+    margin: $space-base 0;
     font-weight: $font-weight-light;
   }
 
   &_info {
-    padding-bottom: 16px;
+    padding-bottom: $space-base;
     border-bottom: 1px solid $color-line;
     display: flex;
     justify-content: space-between;
@@ -99,11 +106,11 @@ $font-weight-bold: 600;
   &_time {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: $space-xs;
   }
 
   &_author {
-    margin-top: 16px;
+    margin-top: $space-base;
     display: flex;
     align-items: center;
     font-weight: $font-weight-light;
@@ -111,7 +118,7 @@ $font-weight-bold: 600;
     &_avatar {
       height: 32px;
       width: 32px;
-      margin-right: 16px;
+      margin-right: $space-base;
       object-fit: cover;
       border: 1px solid $white;
       border-radius: 50%;
@@ -119,7 +126,7 @@ $font-weight-bold: 600;
 
     &_name {
       display: inline-block;
-      margin-left: 4px;
+      margin-left: $space-xs;
       color: $white;
       cursor: pointer;
       transition: 0.5s ease-in-out;
@@ -163,10 +170,10 @@ $font-weight-bold: 600;
 @media (min-width: 992px) {
   .modal {
     height: 564px;
-    padding: 24px;
+    padding: $space-xl;
 
     &_text {
-      margin: 20px 0;
+      margin: $space-l 0;
     }
 
     &_layer {
@@ -174,7 +181,7 @@ $font-weight-bold: 600;
     }
 
     &_info {
-      padding-bottom: 24px;
+      padding-bottom: $space-xl;
     }
 
     &_text {
