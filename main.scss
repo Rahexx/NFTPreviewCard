@@ -169,15 +169,19 @@ $space-xxl: 28px;
 
 @media (min-width: 992px) {
   .modal {
-    height: 564px;
+    height: 600px;
     padding: $space-xl;
 
+    &_content {
+      margin-top: $space-xl;
+    }
+
     &_text {
-      margin: $space-l 0;
+      margin: $space-l 0 $space-xl;
     }
 
     &_layer {
-      height: 55%;
+      height: 56%;
     }
 
     &_info {

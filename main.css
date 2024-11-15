@@ -105,12 +105,14 @@
       content: ''; } }
 @media (min-width: 992px) {
   .modal {
-    height: 564px;
+    height: 600px;
     padding: 24px; }
+    .modal_content {
+      margin-top: 24px; }
     .modal_text {
-      margin: 20px 0; }
+      margin: 20px 0 24px; }
     .modal_layer {
-      height: 55%; }
+      height: 56%; }
     .modal_info {
       padding-bottom: 24px; }
     .modal_text {
